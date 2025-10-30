@@ -1,6 +1,9 @@
 from cowpy.cow import Cowacter
 
-from .math_demo import add
+from .math_demo import add, hello
 
 message = Cowacter().milk(f"3 + 7 = {add(3, 7)}")
 print(message)
+
+print()
+hello("PUB")

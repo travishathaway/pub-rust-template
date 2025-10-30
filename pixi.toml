@@ -14,6 +14,18 @@ math_demo = { path = "." }
 python = "3.11.*"
 cowpy = "*"
 
+[environments]
+build = ["build"]
+
+[feature.build.dependencies]
+maturin = "*"
+pip = "*"
+rust = "*"
+
+[feature.build.tasks]
+build = "PIP_REQUIRE_VIRTUALENV=false maturin develop"
+build-release = "PIP_REQUIRE_VIRTUALENV=false maturin develop --release"
+
 [package]
 name = "math_demo"
 version = "0.1.0"
@@ -22,7 +34,7 @@ version = "0.1.0"
 name = "pixi-build-python"
 version = "*"
 
-[package.build.configuration]
+[package.build.config]
 noarch = false
 
 [package.build-dependencies]
