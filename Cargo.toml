@@ -1,0 +1,11 @@
+[package]
+edition = "2024"
+name = "math_demo"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+name = "math_demo"
+
+[dependencies]
+pyo3 = "0.25.0"
